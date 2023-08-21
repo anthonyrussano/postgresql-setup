@@ -1,8 +1,14 @@
+CREATE TABLE TABLE_NAME (
+    ID SERIAL PRIMARY KEY,
+    CONTENT TEXT
+);
+
 SELECT
     EXISTS (
         SELECT
         FROM
-            PG_TABLES
+            INFORMATION_SCHEMA.TABLES
         WHERE
-            TABLENAME LIKE '%table_name%'
+            TABLE_NAME = 'TABLE_NAME'
+            AND TABLE_SCHEMA = 'public'
     );
