@@ -1,2 +1,5 @@
+HOST = ""
+PORT = ""
+DB = ""
 USERNAME = ""
 PASSWORD = ""

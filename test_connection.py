@@ -1,15 +1,15 @@
 import psycopg2
 from psycopg2 import OperationalError
-from vars import USERNAME, PASSWORD
+from vars import HOST, PORT, DB, USERNAME, PASSWORD
 
 
 def connect_to_db():
     try:
         # Setup the connection parameters
         params = {
-            "host": "10.32.25.124",
-            "port": 5432,
-            "dbname": "prd",
+            "host": HOST,
+            "port": PORT,
+            "dbname": DB,
             "user": USERNAME,
             "password": PASSWORD,
         }
